@@ -1,21 +1,22 @@
-<h2><%= book.title %></h2>
+<h2><%= student.title %></h2>
 <div class="book-details">
     <div>
-        <img src="<%= book.coverImagePath %>" class="book-cover" >
+        <img src="<%= student.ImagePath %>" class="book-cover" >
         <div class="book-details-btn-grid">
-            <a class="btn btn-primary" href="/books/<%= book.id %>/edit">Edit</a>
-            <%- include('../partials/deleteForm', { url: `/books/${book.id}` }) %>
-            <a class="btn btn-primary book-details-author-button" href="/authors/<%= book.author.id %>">View Author</a>
+            <a class="btn btn-primary" href="/students/<%= student.id %>/edit">Edit</a>
+            <%- include('../partials/deleteForm', { url: `/students/${student.id}` }) %>            
         </div>
     </div>
     <div class="book-details-grid">
-        <div class="book-details-label">Author:</div>
-        <div><%= book.author.name %></div>
-        <div class="book-details-label">Published Date:</div>
-        <div><%= book.publishedDate.toDateString() %></div>
-        <div class="book-details-label">Page Count:</div>
-        <div><%= book.pageCount %></div>
-        <div class="book-details-label">Description:</div>
-        <div><%= book.description %></div>
+        <div class="book-details-label">Name:</div>
+        <div><%= student.name %></div>
+        <div class="book-details-label">Father Name:</div>
+        <div><%= student.fatherName %></div>
+        <div class="book-details-label">Date of Birth:</div>
+        <div><%= student.DOB.toDateString() %></div>
+        <div class="book-details-label">Roll No:</div>
+        <div><%= student.rollNo %></div>
+        <div class="book-details-label">Phone 1:</div>
+        <div><%= student.phone1 %></div>
     </div>    
 </div>

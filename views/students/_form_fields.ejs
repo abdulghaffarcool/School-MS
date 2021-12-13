@@ -1,6 +1,6 @@
 <div class="form-row">
     <div class="form-item">
-        <label for="name">name</label>
+        <label for="name">Name</label>
         <input type="text" name="name" value="<%= student.name %>">   
     </div>
     <div class="form-item">
@@ -20,36 +20,45 @@
     </div>
     <div class="form-item">
         <label for="monthlyFee">Monthly Fee</label>
-        <input type="text" name="monthlyFee" value="<%= student.monthlyFee %>">   
+        <input type="number" name="monthlyFee" value="<%= student.monthlyFee %>">   
     </div>
     <div class="form-item">
         <label for="admissionFee">Admission Fee</label>
-        <input type="text" name="admissionFee" value="<%= student.admissionFee %>">   
+        <input type="number" name="admissionFee" value="<%= student.admissionFee %>">   
     </div>    
 </div>
 <div class="form-row">
     <div class="form-item">
-        <label for="annualCharges">annualCharges</label>
-        <textarea name="annualCharges" cols="30" rows="10"><%= book.annualCharges %></textarea>
+        <label for="annualCharges">Annual Charges</label>
+        <input type="number" name="annualCharges" value="<%= student.annualCharges %>">   
     </div>    
     <div class="form-item">
-        <label for="monthlyFee">Monthly Fee</label>
-        <input type="text" name="monthlyFee" value="<%= student.monthlyFee %>">   
-    </div>
+        <label for="stationaryCharges">Stationary Charges</label>
+        <input type="number" name="stationaryCharges" value="<%= student.stationaryCharges %>">   
+    </div>    
     <div class="form-item">
-        <label for="admissionFee">Admission Fee</label>
-        <input type="text" name="admissionFee" value="<%= student.admissionFee %>">   
-    </div>
+        <label for="admissionDate">Admission Date</label>
+        <input type="date" name="admissionDate" 
+                value="<%= student.admissionDate == null ? '' : student.admissionDate.toISOString().split('T')[0] %>">    
+    </div>    
+</div>
+<div class="form-row">
     <div class="form-item">
-        <label for="DOB">Date of Birth</label>
-        <input type="date" name="DOB" 
-                value="<%= student.DOB == null ? '' : student.DOB.toISOString().split('T')[0] %>">    
+        <label for="phone1">Phone 1</label>
+        <input type="text" name="phone1" value="<%= student.phone1 %>">   
+    </div>    
+    <div class="form-item">
+        <label for="phone2">Phone 2</label>
+        <input type="text" name="phone2" value="<%= student.phone2 %>">   
+    </div>    
+    <div class="form-item">
+        <label for="address">Address</label>
+        <textarea name="address" cols="30" rows="10"><%= student.address %></textarea>        
     </div>    
 </div>
 <div class="form-row">
     <div class="form-item form-item-no-grow">
         <label for="image">image</label>
         <input type="file" name="image">
-    </div>
-    
+    </div>    
 </div>

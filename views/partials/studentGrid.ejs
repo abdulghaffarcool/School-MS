@@ -1,0 +1,15 @@
+<div class="book-grid book-grid-small">
+    <% students.forEach(student => { %>
+        <img class="book-cover book-cover-small" src="<%= student.ImagePath %>" alt="">
+        <div><%= student.name %></div>
+        <div><%= student.fatherName %></div>
+        <div><%= student.DOB.toISOString().split('T')[0] %></div>        
+        <div><%= student.rollNo %></div>
+        <div class="form-row form-row-end btn-row">        
+            <a class="btn btn-primary" href='/students/<%= student.id %>'>View</a>        
+            <a class="btn btn-primary" href='/students/<%= student.id %>/edit'>Edit</a>        
+            <%- include('../partials/deleteForm.ejs', { url: `/students/${ student.id }` }) %>
+        </div>
+    
+    <% }) %>
+</div>

@@ -1,5 +1,6 @@
 :root {
   --book-cover-width: 200px;
+  --book-cover-width-small: 50px;
   --book-cover-width-large: 325px;
   --book-cover-aspect-ratio: 0.75;
 }
@@ -10,14 +11,25 @@
 }
 
 .book-cover-large {
-  --book-cover-width: var(var(--book-cover-width-large));
+  --book-cover-width: var(--book-cover-width-large);
+}
+
+.book-cover-small {
+  --book-cover-width: var(--book-cover-width-small);
 }
 
 .book-grid {
   display: grid;
   justify-content: center;
-  grid-gap: 2rem;
+  grid-gap: 0.5rem;
   grid-template-columns: repeat(auto-fill, var(--book-cover-width));
+}
+
+.book-grid-small {
+  grid-template-columns: repeat(
+    auto-fill,
+    calc(var(--book-cover-width-small) * 3)
+  );
 }
 
 .book-grid-large {
