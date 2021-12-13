@@ -1,0 +1,55 @@
+<div class="form-row">
+    <div class="form-item">
+        <label for="name">name</label>
+        <input type="text" name="name" value="<%= student.name %>">   
+    </div>
+    <div class="form-item">
+        <label for="fatherName">Father Name</label>
+        <input type="text" name="fatherName" value="<%= student.fatherName %>">   
+    </div>
+    <div class="form-item">
+        <label for="rollNo">Roll No</label>
+        <input type="text" name="rollNo" value="<%= student.rollNo %>">   
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-item">
+        <label for="DOB">Date of Birth</label>
+        <input type="date" name="DOB" 
+                value="<%= student.DOB == null ? '' : student.DOB.toISOString().split('T')[0] %>">    
+    </div>
+    <div class="form-item">
+        <label for="monthlyFee">Monthly Fee</label>
+        <input type="text" name="monthlyFee" value="<%= student.monthlyFee %>">   
+    </div>
+    <div class="form-item">
+        <label for="admissionFee">Admission Fee</label>
+        <input type="text" name="admissionFee" value="<%= student.admissionFee %>">   
+    </div>    
+</div>
+<div class="form-row">
+    <div class="form-item">
+        <label for="annualCharges">annualCharges</label>
+        <textarea name="annualCharges" cols="30" rows="10"><%= book.annualCharges %></textarea>
+    </div>    
+    <div class="form-item">
+        <label for="monthlyFee">Monthly Fee</label>
+        <input type="text" name="monthlyFee" value="<%= student.monthlyFee %>">   
+    </div>
+    <div class="form-item">
+        <label for="admissionFee">Admission Fee</label>
+        <input type="text" name="admissionFee" value="<%= student.admissionFee %>">   
+    </div>
+    <div class="form-item">
+        <label for="DOB">Date of Birth</label>
+        <input type="date" name="DOB" 
+                value="<%= student.DOB == null ? '' : student.DOB.toISOString().split('T')[0] %>">    
+    </div>    
+</div>
+<div class="form-row">
+    <div class="form-item form-item-no-grow">
+        <label for="image">image</label>
+        <input type="file" name="image">
+    </div>
+    
+</div>

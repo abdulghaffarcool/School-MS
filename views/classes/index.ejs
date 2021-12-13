@@ -1,0 +1,24 @@
+<h2>Search Classes</h2>
+<form action="/classes" method="GET">
+    <div class="form-row">
+        <div class="form-item">
+            <label for="className">Class Name</label>
+            <input type="text" name="className" value="<%= searchOptions.className %>" >
+        </div>
+    </div>
+    <div class="form-row form-row-end">
+        <button class="btn btn-primary" type="submit">Search</button>
+    </div>
+</form>
+<br>
+<% classes.forEach(classs => { %>
+    <div class="author-row">
+        <div class="author-name"><%= classs.className %></div>
+        <div class="author-name"><%= classs.description %></div>
+        <div class="form-row form-row-end btn-row">
+            <a class="btn btn-primary" href='/classes/<%= classs.id %>'>View</a>
+            <a class="btn btn-primary" href='/classes/<%= classs.id %>/edit'>Edit</a>
+            <%- include('../partials/deleteForm.ejs', { url: `/classes/${ classs.id }` }) %>
+        </div>
+    </div>    
+<% }) %>

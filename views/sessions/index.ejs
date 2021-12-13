@@ -1,0 +1,26 @@
+<h2>Search Sessions</h2>
+<form action="/sessions" method="GET">
+<div class="form-row">
+    <div class="form-item">
+        <label for="sessionName">Session Name</label>
+        <input type="text" name="sessionName" value="<%= searchOptions.sessionName %>" >
+    </div>    
+</div>
+<div class="form-row">
+    <div class="form-item">
+        <label for="startDate">Start Date</label>
+        <input type="date" name="startDate" value="<%= searchOptions.startDate %>" >    
+    </div>
+    <div class="form-item">
+        <label for="endDate">End Date</label>
+        <input type="date" name="endDate" value="<%= searchOptions.endDate %>" >    
+    </div>
+</div>
+    <div class="form-row form-row-end">
+        <button class="btn btn-primary" type="submit">Search</button>
+    </div>    
+</form>
+<br>
+<div>
+    <%- include('../partials/sessionGrid', { sessions: sessions }) %>
+</div>

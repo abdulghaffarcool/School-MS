@@ -1,0 +1,24 @@
+<div class="form-row">
+    <div class="form-item">
+        <label for="sessionName">Session Name</label>
+        <input type="text" name="sessionName" value="<%= session.sessionName %>">   
+    </div>    
+</div>
+<div class="form-row">
+    <div class="form-item">
+        <label for="startDate">Start Date</label>
+        <input type="date" name="startDate" 
+                value="<%= session.startDate == null ? '' : session.startDate.toISOString().split('T')[0] %>">    
+    </div>
+    <div class="form-item">
+        <label for="endDate">End Date</label>
+        <input type="date" name="endDate" 
+                value="<%= session.endDate == null ? '' : session.endDate.toISOString().split('T')[0] %>">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-item">
+        <label for="description">Description</label>
+        <textarea name="description" cols="30" rows="10"><%= session.description %></textarea>
+    </div>
+</div>

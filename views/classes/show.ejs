@@ -1,0 +1,6 @@
+<h2><%= classs.className %></h2>
+<span class="author-name"><%= classs.description %></span>
+<div class="btn-row">
+    <a class="btn btn-primary" href="/classes/<%= classs.id %>/edit">Edit</a>
+    <%- include('../partials/deleteForm', { url: `/classes/${classs.id}` }) %>
+</div>

@@ -1,0 +1,8 @@
+<h2>Edit Class</h2>
+<form action="/classes/<%= classs.id %>?_method=PUT" method="POST">
+    <%- include('_form_fields') %>
+    <div class="form-row form-row-end btn-row">
+        <a class="btn btn-danger" href="/classes/<%= classs.id %>">Cancel</a>
+        <button class="btn btn-primary" type="submit">Update</button>
+    </div>
+</form>

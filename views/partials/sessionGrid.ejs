@@ -1,0 +1,15 @@
+<div class="book-grid">
+    <% sessions.forEach(session => { %>
+
+        <div><%= session.sessionName %></div>
+        <div><%= session.startDate.toISOString().split('T')[0] %></div>
+        <div><%= session.endDate.toISOString().split('T')[0] %></div>
+        <div><%= session.description %></div>
+        <div class="form-row form-row-end btn-row">        
+            <a class="btn btn-primary" href='/sessions/<%= session.id %>'>View</a>        
+            <a class="btn btn-primary" href='/sessions/<%= session.id %>/edit'>Edit</a>        
+            <%- include('../partials/deleteForm.ejs', { url: `/sessions/${ session.id }` }) %>
+        </div>
+    
+    <% }) %>
+</div>

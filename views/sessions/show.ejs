@@ -1,0 +1,17 @@
+<h2><%= session.sessionName %></h2>
+<div class="session-details">
+    <div>        
+        <div class="session-details-btn-grid">
+            <a class="btn btn-primary" href="/sessions/<%= session.id %>/edit">Edit</a>
+            <%- include('../partials/deleteForm', { url: `/sessions/${session.id}` }) %>            
+        </div>
+    </div>
+    <div class="session-details-grid">
+        <div class="session-details-label">Start Date:</div>
+        <div><%= session.startDate.toDateString() %></div>
+        <div class="session-details-label">End Date:</div>
+        <div><%= session.endDate.toDateString() %></div>
+        <div class="session-details-label">Description:</div>
+        <div><%= session.description %></div>
+    </div>    
+</div>
