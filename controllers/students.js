@@ -101,13 +101,21 @@ router.put('/:id', upload.single('image'), async (req, res) => {
     
     try {
         student = await Student.findById(req.params.id)
-        
+                
         student.name = req.body.name
-        student.author = req.body.author
-        student.publishedDate = new Date(req.body.publishedDate)
-        student.pageCount = req.body.pageCount
-        student.description = req.body.description
-        
+        student.fatherName = req.body.fatherName
+        student.rollNo = req.body.rollNo
+        student.DOB = new Date(req.body.DOB)
+        student.monthlyFee = req.body.monthlyFee
+        student.admissionFee = req.body.admissionFee
+        student.annualCharges = req.body.annualCharges
+        student.stationaryCharges = req.body.stationaryCharges
+        student.admissionDate = new Date(req.body.admissionDate)
+        student.phone1 = req.body.phone1
+        student.phone2 = req.body.phone2
+        student.ImageName = fileName
+        student.address = req.body.address
+
         await student.save()
         res.redirect(`/students/${student.id}`)
     } catch {
